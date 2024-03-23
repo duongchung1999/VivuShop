@@ -296,7 +296,7 @@
 }
 
 .header__navbar-language-item {
-padding: 6px 0;
+padding: 6px 6px;
 }
 
 .header__navbar-language-link {
@@ -993,4 +993,18 @@ padding: 6px 0;
 
 .header-content__btn {
     display: none;
+}
+li.header__navbar-item:hover {
+    background-color: #9999;
+}
+
+li.header__navbar-item {
+    border-radius: 20px;
+}
+li.header__navbar-language-item {
+    border-radius: 20px;
+}
+
+li.header__navbar-language-item:hover {
+    background-color: #9999;
 }

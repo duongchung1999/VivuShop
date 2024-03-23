@@ -10,6 +10,7 @@ import './assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css'
 
 import HeaderSearch from './Component/Header/HeaderSearch';
 import HeaderNavbar from './Component/Header/HeaderNavbar';
+import Container from './Component/Container/Container';
 
 
 function App() {
@@ -18,8 +19,15 @@ function App() {
       {/* <header className="App-header">
         
       </header> */}
-      <HeaderSearch/>
-      <HeaderNavbar/>
+      <div className='header'>
+        <div className='header-content'>
+          <HeaderSearch/>
+          <HeaderNavbar/>
+        </div>
+      </div>
+      <Container/>
+      
+      
     </div>
   );
 }
