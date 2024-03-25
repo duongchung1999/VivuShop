@@ -11,7 +11,7 @@ import './assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css'
 import HeaderSearch from './Component/Header/HeaderSearch';
 import HeaderNavbar from './Component/Header/HeaderNavbar';
 import Container from './Component/Container/Container';
-
+import Footer from './Component/Footer/Footer';
 
 function App() {
   return (
@@ -26,6 +26,7 @@ function App() {
         </div>
       </div>
       <Container/>
+      <Footer/>
       
       
     </div>

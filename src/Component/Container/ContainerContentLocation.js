@@ -12,6 +12,7 @@ import NhaTrang from '../../assets/img/nhatrang.png';
 import VungTau from '../../assets/img/vungtau.png';
 import '../../main.js';
 import '../../assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css'
+import LocationItemList from './LocationItemList.js';
 
 
 import React, { Component } from 'react'
@@ -47,6 +48,7 @@ export default class ContainerContentLocation extends Component {
     state = {
         slideIndex: 5,
     };
+   
 
     showLocationHandle = (n) => {
         const slidesLocation = document.querySelectorAll('.container__content-location-item');
@@ -74,20 +76,22 @@ export default class ContainerContentLocation extends Component {
             return { slideIndex: newIndex };
         });
     };
+    
 
   render() {
+    const { Header, Content, LocationReview } = this.props;
     return (
         <div className="container__content-location">
             <h3 className="container__content-heading">
-            {this.props.Header}
-            Địa điểm nổi bật
+            {Header}
+            {/* Địa điểm nổi bật */}
             </h3>
             <p className="container__content-descriptions">
-            {this.props.content}
-            Cùng Luxstay bắt đầu chuyến hành trình chinh phục thế giới của bạn
+            {Content}
+            {/* Cùng Luxstay bắt đầu chuyến hành trình chinh phục thế giới của bạn */}
             </p>
             <div className="container__content-slide">
-            <ul className="container__content-location-list">
+            {/* <ul className="container__content-location-list">
                 {this.props.LocationItems}
                 <LocationItem imagePath={hanoi} Location="Hà Nội" Number = "2819" />
                 <LocationItem imagePath={TPHCM} Location="TP. Hồ Chí Minh" Number = "2819" />
@@ -98,7 +102,8 @@ export default class ContainerContentLocation extends Component {
                 <LocationItem imagePath={NhaTrang} Location="Nha Trang" Number = "2819" />
                 <LocationItem imagePath={VungTau} Location="Vũng Tàu" Number = "2819" />
                 
-            </ul>
+            </ul> */}
+            {LocationReview}
             <button className="container__content-location-btn btn-location container__content-location-btn--left"
                 onClick={this.prevSlide}
              >
@@ -115,3 +120,4 @@ export default class ContainerContentLocation extends Component {
     )
   }
 }
+

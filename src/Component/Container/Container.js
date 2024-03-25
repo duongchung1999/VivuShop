@@ -9,6 +9,14 @@ import HoiAn from '../../assets/img/hoian.png';
 import QuangNinh from '../../assets/img/quangninh.png';
 import NhaTrang from '../../assets/img/nhatrang.png';
 import VungTau from '../../assets/img/vungtau.png';
+// import sugges1 from '../../assets/img/sugges1.png';
+// import sugges2 from '../../assets/img/sugges2.png';
+import LocationItemList from './LocationItemList.js';
+import ContainerSale from "./ContainerSale.js";
+import ContainerSugest from "./ContainerSugest.js";
+import ContainerDiscover from "./ContainerDiscover.js";
+import ContainerGuide from "./ContainerGuide.js";
+import ContainerFooter from "./ContainerFooter.js";
 
 import React, { Component } from 'react'
 
@@ -20,51 +28,47 @@ export default class Container extends Component {
         <div className='grid wide-1260'>
             <ContainerHeading/>
             <div className="container__content">
-                <ContainerContentLocation />
+                <ContainerContentLocation 
+                    Header="Địa điểm nổi bật" 
+                    Content="Cùng Luxstay bắt đầu chuyến hành trình chinh phục thế giới của bạn" 
+                    LocationReview = {<LocationReview1/>}
+                />
+                {/* <ContainerContentLocation 
+                    Header="Ưu đãi độc quyền" 
+                    Content="Chỉ có tại Luxstay, hấp dẫn và hữu hạn, book ngay!" 
+                    LocationReview = {<LocationReview1/>}
+                /> */}
+                <ContainerSale/>
+                <ContainerSugest/>
+                <ContainerDiscover/>
+                <ContainerGuide/>
             </div>
+            <ContainerFooter/>
         </div>
+        
       </div>
     )
   }
 }
 
-function LocationItem(props){
-    return(
-        <li className="container__content-location-item">
-            <a href="" className="container__content-location-link">
-                <img
-                src={props.imagePath}
-                alt=""
-                className="container__content-location-img"
-                />
-                <div className="container__content-location-label">
-                <h3 className="container__content-location-city">
-                    {props.Location}
-                </h3>
-                <span className="container__content-location-quantity">
-                    <span className="container__content-location-number">
-                        {props.Number}
-                    </span>
-                    chỗ ở
-                </span>
-                </div>
-            </a>
-        </li>
-    )
-}
-
-function LocationReview(){
+function LocationReview1(){
     return(
         <div>
-            <LocationItem imagePath={hanoi} Location="Hà Nội" Number = "2819" />
-            <LocationItem imagePath={TPHCM} Location="TP. Hồ Chí Minh" Number = "2819" />
-            <LocationItem imagePath={Danang} Location="Đà Nẵng" Number = "2819" />
-            <LocationItem imagePath={Dalat} Location="Đà Lạt" Number = "2819" />
-            <LocationItem imagePath={HoiAn} Location="Hội An" Number = "2819" />
-            <LocationItem imagePath={QuangNinh} Location="Quảng Ninh" Number = "2819" />
-            <LocationItem imagePath={NhaTrang} Location="Nha Trang" Number = "2819" />
-            <LocationItem imagePath={VungTau} Location="Vũng Tàu" Number = "2819" />
+            <ul className="container__content-location-list">
+                <LocationItemList imagePath={hanoi} Location="Hà Nội" Number = "2819" />
+                <LocationItemList imagePath={TPHCM} Location="TP. Hồ Chí Minh" Number = "3200" />
+                <LocationItemList imagePath={Danang} Location="Đà Nẵng" Number = "1680" />
+                <LocationItemList imagePath={Dalat} Location="Đà Lạt" Number = "780" />
+                <LocationItemList imagePath={HoiAn} Location="Hội An" Number = "700" />
+                <LocationItemList imagePath={QuangNinh} Location="Quảng Ninh" Number = "905" />
+                <LocationItemList imagePath={NhaTrang} Location="Nha Trang" Number = "285" />
+                <LocationItemList imagePath={VungTau} Location="Vũng Tàu" Number = "272" />
+            </ul>
+           
         </div>
     )
 }
+
+
+
 
