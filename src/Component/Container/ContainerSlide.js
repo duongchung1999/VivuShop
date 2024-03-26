@@ -4,8 +4,8 @@ import '../../assets/css/grid.css'
 import '../../assets/css/responsive.css'
 import slide1 from '../../assets/img/slide1.png';
 import slide2 from '../../assets/img/slide2.png';
-import { currentSlide } from '../../main.js';
- import '../../main.js';
+import { CurrentSlide } from '../../main.js';
+import '../../main.js';
 import '../../assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css'
 
 import React, { Component } from 'react'
@@ -38,11 +38,11 @@ export default class ContainerSlide extends Component {
                 <SlideItem slide={slide2}/>
                 <div className="container__slide-dot">
                     <div
-                        onClick={() => currentSlide(1)}
+                        onClick={() => CurrentSlide(1)}
                         className="container__slide-dot-item container__slide-dot-item--active"
                     />
                     <div 
-                    onClick={() => currentSlide(2)}
+                    onClick={() => CurrentSlide(2)}
                     className="container__slide-dot-item" />
                 </div>
             </ul>

@@ -1,14 +1,14 @@
 var slideIndex = 1;
-showSlides(slideIndex);
-showSlidesAuto();
+ShowSlides(slideIndex);
+ShowSlidesAuto();
 
-export function currentSlide (n) {
-    showSlides(slideIndex = n);
+export function CurrentSlide (n) {
+    ShowSlides(slideIndex = n);
 }
 
 
 
-function showSlides (n) {
+function ShowSlides (n) {
     var i;
     var slides = document.querySelectorAll('.container__slide-item');
     var dots = document.querySelectorAll('.container__slide-dot-item');
@@ -38,7 +38,7 @@ function showSlides (n) {
     
 }
 
-function showSlidesAuto () {
+function ShowSlidesAuto () {
     var i;
     var slides = document.querySelectorAll('.container__slide-item');
     var dots = document.querySelectorAll('.container__slide-dot-item');
@@ -56,7 +56,7 @@ function showSlidesAuto () {
     if (slideIndex >= 1 && slideIndex <= slides.length){
         slides[slideIndex - 1].style.display = 'block';
         dots[slideIndex - 1].className += ' container__slide-dot-item--active';
-        setTimeout(showSlidesAuto, 5000);
+        setTimeout(ShowSlidesAuto, 5000);
     }
     else {
         console.log("Invalid slide index or slides array is empty");

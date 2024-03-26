@@ -7,7 +7,7 @@ import './assets/css/responsive.css'
 // import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'
 // import 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'
 import './assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css'
-
+// import './main.js'
 import HeaderSearch from './Component/Header/HeaderSearch';
 import HeaderNavbar from './Component/Header/HeaderNavbar';
 import Container from './Component/Container/Container';
